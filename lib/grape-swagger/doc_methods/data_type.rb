@@ -53,7 +53,7 @@ module GrapeSwagger
           elsif model.to_s.end_with?('::Entity', '::Entities')
             model.to_s.split('::')[-2]
           elsif model.respond_to?(:name)
-            model.name.demodulize.camelize
+            model.name.camelize
           else
             model.to_s.split('::').last
           end
